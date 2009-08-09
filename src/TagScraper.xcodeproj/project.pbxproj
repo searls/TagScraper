@@ -1,0 +1,446 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA747D9F0F9514B9006C5449 /* TagScraper_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* TagScraper_Prefix.pch */; };
+		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		EA61A2FD102DFE5100458CC6 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA61A2FC102DFE5100458CC6 /* libxml2.dylib */; };
+		EA61A396102E0DE500458CC6 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA61A395102E0DE500458CC6 /* SenTestingKit.framework */; };
+		EA6B4385102E76CC003BCE97 /* NSStringAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = EA61A366102E036400458CC6 /* NSStringAdditions.h */; };
+		EA6B4415102E7979003BCE97 /* libTagScraper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libTagScraper.a */; };
+		EA8B0257102E2512000ACB05 /* XPathQueryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8B0256102E2512000ACB05 /* XPathQueryTest.m */; };
+		EA8B0290102E27AE000ACB05 /* TagTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8B028F102E27AE000ACB05 /* TagTest.m */; };
+		EA8B02A1102E28D1000ACB05 /* sample-1.html in Resources */ = {isa = PBXBuildFile; fileRef = EA8B02A0102E28D1000ACB05 /* sample-1.html */; };
+		EA8B0384102E7303000ACB05 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA61A2FC102DFE5100458CC6 /* libxml2.dylib */; };
+		EA8B0394102E7609000ACB05 /* NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EA61A367102E036400458CC6 /* NSStringAdditions.m */; };
+		EA8B0395102E7609000ACB05 /* Tag.h in Headers */ = {isa = PBXBuildFile; fileRef = EA61A349102DFEB500458CC6 /* Tag.h */; };
+		EA8B0396102E7609000ACB05 /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = EA61A34A102DFEB500458CC6 /* Tag.m */; };
+		EA8B0397102E7609000ACB05 /* XPathQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = EA61A345102DFE9000458CC6 /* XPathQuery.h */; };
+		EA8B0398102E7609000ACB05 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = EA61A346102DFE9000458CC6 /* XPathQuery.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EA6B4426102E79A8003BCE97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D /* TagScraper */;
+			remoteInfo = TagScraper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AA747D9E0F9514B9006C5449 /* TagScraper_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagScraper_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2AAC07E0554694100DB518D /* libTagScraper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTagScraper.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA61A2FC102DFE5100458CC6 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		EA61A345102DFE9000458CC6 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = SOURCE_ROOT; };
+		EA61A346102DFE9000458CC6 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = SOURCE_ROOT; };
+		EA61A349102DFEB500458CC6 /* Tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tag.h; sourceTree = SOURCE_ROOT; };
+		EA61A34A102DFEB500458CC6 /* Tag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tag.m; sourceTree = SOURCE_ROOT; };
+		EA61A366102E036400458CC6 /* NSStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringAdditions.h; sourceTree = SOURCE_ROOT; };
+		EA61A367102E036400458CC6 /* NSStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringAdditions.m; sourceTree = SOURCE_ROOT; };
+		EA61A395102E0DE500458CC6 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Developer/Library/Frameworks/SenTestingKit.framework; sourceTree = SDKROOT; };
+		EA61A3DD102E0EB500458CC6 /* TagScraperTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TagScraperTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA61A3DE102E0EB500458CC6 /* TagScraperTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TagScraperTests-Info.plist"; sourceTree = "<group>"; };
+		EA8B0255102E2512000ACB05 /* XPathQueryTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQueryTest.h; sourceTree = "<group>"; };
+		EA8B0256102E2512000ACB05 /* XPathQueryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQueryTest.m; sourceTree = "<group>"; };
+		EA8B028E102E27AE000ACB05 /* TagTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagTest.h; sourceTree = "<group>"; };
+		EA8B028F102E27AE000ACB05 /* TagTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagTest.m; sourceTree = "<group>"; };
+		EA8B02A0102E28D1000ACB05 /* sample-1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "sample-1.html"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+				EA61A2FD102DFE5100458CC6 /* libxml2.dylib in Frameworks */,
+				EA61A396102E0DE500458CC6 /* SenTestingKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA61A3DA102E0EB500458CC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA8B0384102E7303000ACB05 /* libxml2.dylib in Frameworks */,
+				EA6B4415102E7979003BCE97 /* libTagScraper.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libTagScraper.a */,
+				EA61A3DD102E0EB500458CC6 /* TagScraperTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* TagScraper */ = {
+			isa = PBXGroup;
+			children = (
+				EA61A38E102E0C9D00458CC6 /* Tests */,
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				EA8B029F102E28B2000ACB05 /* Test Resources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+				EA61A3DE102E0EB500458CC6 /* TagScraperTests-Info.plist */,
+			);
+			name = TagScraper;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA61A395102E0DE500458CC6 /* SenTestingKit.framework */,
+				EA61A2FC102DFE5100458CC6 /* libxml2.dylib */,
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EA61A349102DFEB500458CC6 /* Tag.h */,
+				EA61A34A102DFEB500458CC6 /* Tag.m */,
+				EA61A345102DFE9000458CC6 /* XPathQuery.h */,
+				EA61A346102DFE9000458CC6 /* XPathQuery.m */,
+				EA61A366102E036400458CC6 /* NSStringAdditions.h */,
+				EA61A367102E036400458CC6 /* NSStringAdditions.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AA747D9E0F9514B9006C5449 /* TagScraper_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		EA61A38E102E0C9D00458CC6 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				EA8B0255102E2512000ACB05 /* XPathQueryTest.h */,
+				EA8B0256102E2512000ACB05 /* XPathQueryTest.m */,
+				EA8B028E102E27AE000ACB05 /* TagTest.h */,
+				EA8B028F102E27AE000ACB05 /* TagTest.m */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		EA8B029F102E28B2000ACB05 /* Test Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EA8B02A0102E28D1000ACB05 /* sample-1.html */,
+			);
+			name = "Test Resources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA747D9F0F9514B9006C5449 /* TagScraper_Prefix.pch in Headers */,
+				EA8B0395102E7609000ACB05 /* Tag.h in Headers */,
+				EA8B0397102E7609000ACB05 /* XPathQuery.h in Headers */,
+				EA6B4385102E76CC003BCE97 /* NSStringAdditions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* TagScraper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "TagScraper" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TagScraper;
+			productName = TagScraper;
+			productReference = D2AAC07E0554694100DB518D /* libTagScraper.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EA61A3DC102E0EB500458CC6 /* TagScraperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA61A3E1102E0EB600458CC6 /* Build configuration list for PBXNativeTarget "TagScraperTests" */;
+			buildPhases = (
+				EA61A3D8102E0EB500458CC6 /* Resources */,
+				EA61A3D9102E0EB500458CC6 /* Sources */,
+				EA61A3DA102E0EB500458CC6 /* Frameworks */,
+				EA61A3DB102E0EB500458CC6 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA6B4427102E79A8003BCE97 /* PBXTargetDependency */,
+			);
+			name = TagScraperTests;
+			productName = TagScraperTests;
+			productReference = EA61A3DD102E0EB500458CC6 /* TagScraperTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "TagScraper" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 0867D691FE84028FC02AAC07 /* TagScraper */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* TagScraper */,
+				EA61A3DC102E0EB500458CC6 /* TagScraperTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA61A3D8102E0EB500458CC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA8B02A1102E28D1000ACB05 /* sample-1.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EA61A3DB102E0EB500458CC6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA8B0394102E7609000ACB05 /* NSStringAdditions.m in Sources */,
+				EA8B0396102E7609000ACB05 /* Tag.m in Sources */,
+				EA8B0398102E7609000ACB05 /* XPathQuery.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA61A3D9102E0EB500458CC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA8B0257102E2512000ACB05 /* XPathQueryTest.m in Sources */,
+				EA8B0290102E27AE000ACB05 /* TagTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EA6B4427102E79A8003BCE97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AAC07D0554694100DB518D /* TagScraper */;
+			targetProxy = EA6B4426102E79A8003BCE97 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/TagScraper.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TagScraper_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = TagScraper;
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/TagScraper.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TagScraper_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = TagScraper;
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2";
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.1;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2";
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.1;
+			};
+			name = Release;
+		};
+		EA61A3DF102E0EB600458CC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = "TagScraperTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+					"-framework",
+					Foundation,
+					"-framework",
+					SenTestingKit,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = TagScraperTests;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		EA61A3E0102E0EB600458CC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				INFOPLIST_FILE = "TagScraperTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+					"-framework",
+					Foundation,
+					"-framework",
+					SenTestingKit,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = TagScraperTests;
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "TagScraper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "TagScraper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA61A3E1102E0EB600458CC6 /* Build configuration list for PBXNativeTarget "TagScraperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA61A3DF102E0EB600458CC6 /* Debug */,
+				EA61A3E0102E0EB600458CC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}
