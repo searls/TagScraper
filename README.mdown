@@ -23,22 +23,22 @@ Adding TagScraper to your project
  2. Click the "+" icon under "Direct Dependencies" and add "TagScraper".
  3. Click the "+" icon under "Linked Libraries" and add "libxml2.dylib".
 5. Set up the project settings
- 1. From the menu bar, select `Project -> Edit Project Settings` and click the "Build" tab. 
- 2. Set Configuration to "All Configurations" 
- 3. Under "Other Linker Flags" add both: "-all_load" and "-ObjC"
- 4. Under "Header Search Paths", add the relative path from your XCode project to the TagScraper source files. If your project and TagScraper shared the same root folder, this would be "../TagScraper/src"
+	1. From the menu bar, select `Project -> Edit Project Settings` and click the "Build" tab. 
+	2. Set Configuration to "All Configurations" 
+	3. Under "Other Linker Flags" add both: "-all_load" and "-ObjC"
+	4. Under "Header Search Paths", add the relative path from your XCode project to the TagScraper source files. If your project and TagScraper shared the same root folder, this would be "../TagScraper/src"
 6. Use it in your code. For now, that means importing each file by hand (haven't merged these yet), so import these:
-`
+<pre>
     #import "Tag.h"
     #import "XPathQuery.h"
-`
+</pre>
 Then to practice it in code, here's an example converting an NSString to an NSData and producing a Tag with it, and will log to console "Content", if all is well.
-`
+<pre>
     NSString *html = @"<html><p>Content</p></html>";
     NSData *data = [html dataUsingEncoding:NSUTF8StringEncoding];
     Tag *tag = [XPathQuery firstResultForXPathQuery:@"//p" onDocument:data];
     NSLog([tag retrieveText]);
-`
+</pre>
 
 
 
