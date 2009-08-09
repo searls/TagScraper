@@ -28,10 +28,9 @@ Adding TagScraper to your project
 
 Usage
 -----
-For now, you need to import each header by hand, so import these:
+Simply import the global header to access any of TagScraper's classes. For now, those are merely `Tag` and `XPathQuery`
 <pre>
-`#import "Tag.h"`
-`#import "XPathQuery.h"`
+`#import "TagScraper.h"`
 </pre>
 Then to try it in your code, here's an example converting an NSString to an NSData, performing the XPath query `//p`, and produce a Tag object from it. It *should* log "Content" to console.
 <pre>

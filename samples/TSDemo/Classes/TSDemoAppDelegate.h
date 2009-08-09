@@ -7,9 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Tag.h"
-#import "XPathQuery.h"
-
+#import "TagScraper.h"
 
 @class TSDemoViewController;
 

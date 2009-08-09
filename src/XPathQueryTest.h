@@ -7,8 +7,7 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 #import <UIKit/UIKit.h>
-#import "XPathQuery.h"
-#import "Tag.h"
+#import "TagScraper.h"
 
 @interface XPathQueryTest : SenTestCase {
   NSData *_sampleOne;

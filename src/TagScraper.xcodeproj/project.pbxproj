@@ -22,6 +22,7 @@
 		EA8B0396102E7609000ACB05 /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = EA61A34A102DFEB500458CC6 /* Tag.m */; };
 		EA8B0397102E7609000ACB05 /* XPathQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = EA61A345102DFE9000458CC6 /* XPathQuery.h */; };
 		EA8B0398102E7609000ACB05 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = EA61A346102DFE9000458CC6 /* XPathQuery.m */; };
+		EAD32DD1102F842000657208 /* TagScraper.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD32DD0102F842000657208 /* TagScraper.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +30,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D /* TagScraper */;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = TagScraper;
 		};
 /* End PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		EA8B028E102E27AE000ACB05 /* TagTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagTest.h; sourceTree = "<group>"; };
 		EA8B028F102E27AE000ACB05 /* TagTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagTest.m; sourceTree = "<group>"; };
 		EA8B02A0102E28D1000ACB05 /* sample-1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "sample-1.html"; sourceTree = SOURCE_ROOT; };
+		EAD32DD0102F842000657208 /* TagScraper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagScraper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				EAD32DD0102F842000657208 /* TagScraper.h */,
 				EA61A349102DFEB500458CC6 /* Tag.h */,
 				EA61A34A102DFEB500458CC6 /* Tag.m */,
 				EA61A345102DFE9000458CC6 /* XPathQuery.h */,
@@ -162,6 +165,7 @@
 				EA8B0395102E7609000ACB05 /* Tag.h in Headers */,
 				EA8B0397102E7609000ACB05 /* XPathQuery.h in Headers */,
 				EA6B4385102E76CC003BCE97 /* NSStringAdditions.h in Headers */,
+				EAD32DD1102F842000657208 /* TagScraper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
