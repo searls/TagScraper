@@ -1,0 +1,5 @@
+Limitations and Annoyances:
+
+* XPath queries are currently only case sensitive. Adding some flags to control this and other contextual items would be nice.
+* Very few HTML entities are properly escaped.
+* In general, the Tag object model will strip whitespace aggressively without being clear in the API. This is because it was written to scrape pages that used abhorrent amounts of unnecessary whitespace within HTML content tags.
