@@ -8,25 +8,19 @@
 	NSMutableDictionary *_attributeDict;
 	NSString *_text;
 	
-  //This is a Three20 reference.
-	BOOL _willBeStyled;
-	
 	NSMutableArray *_children;
-  
-  BOOL _childTextFound; //Used as a scratchpad for recursion
 }
 
 @property (nonatomic, retain) NSMutableArray *children;
-@property BOOL willBeStyled; 
 @property (nonatomic, retain) NSString *text;
 @property (nonatomic, retain) NSString *name;
-@property (nonatomic, retain) NSMutableDictionary *attributeDict;
+@property (nonatomic, readonly) NSMutableDictionary *attributeDict;
 
 - (id)initWithName:(NSString*)aName;
 - (id)initWithName:(NSString*)aName text:(NSString*)someText;
-- (id)initWithName:(NSString*)aName text:(NSString*)someText attributes:(NSMutableDictionary*)attributes;
 /** Designated initializer **/
-- (id)initWithName:(NSString*)aName text:(NSString*)someText attributes:(NSMutableDictionary*)attributes willBeStyled:(BOOL)isStyled;
+- (id)initWithName:(NSString*)aName text:(NSString*)someText attributes:(NSMutableDictionary*)attributes;
+
 
 /** Mutators **/
 - (void)addChildTag:(Tag*)tag;
@@ -52,6 +46,10 @@
 - (NSString*)retrieveTextUpToDepth:(NSUInteger)maxDepth escapeHtmlEntities:(BOOL)shouldEscape; //addSpaceBetweenTags:YES
 - (NSString*)retrieveTextUpToDepth:(NSUInteger)maxDepth; //escapeHtmlEntities:YES //addSpaceBetweenTags:YES
 - (NSString*)retrieveText;//UpToDepth:-1 //escapeHtmlEntities:YES  //addSpaceBetweenTags:YES
+
+/* Will print out the tag hierarchy to XML (or HTML) */
+//Note: This is useful for logging, but won't produce pretty or well-formed documents
+- (NSString*)toHTML;
 
 @end
 

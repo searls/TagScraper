@@ -11,13 +11,18 @@
 
 
 @interface TagTest : SenTestCase {
-
+  NSData *_sampleOne;
 }
+
+@property (nonatomic, retain) NSData *sampleOne;
 
 #if USE_APPLICATION_UNIT_TEST
 
 #else
 
+- (void)testPrintingTags;
+
 #endif
 
 @end
+

@@ -21,6 +21,10 @@
 
 - (void) testSimpleXpathQueryWithDictionary;
 
+- (void) testAttributeEquivalence;
+
+- (void) testXPathTraversal;
+
 #endif
 
 

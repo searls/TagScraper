@@ -3,32 +3,32 @@
 #import "Tag.h"
 #import "NSStringAdditions.h"
 
+@interface Tag()
+- (NSString*)recurseUpToDepth:(NSUInteger)depth escapeHtmlEntities:(BOOL)shouldEscape addSpaceBetweenTags:(BOOL)addSpace;
++ (NSString*)printTags:(NSArray*)tags removeTextAndComments:(BOOL)cullText;
+@end
+
 @implementation Tag
 
-@synthesize children = _children, willBeStyled = _willBeStyled, 
-            text = _text, name = _name, attributeDict = _attributeDict;
+@synthesize children = _children,
+text = _text, name = _name, attributeDict = _attributeDict;
 
 #pragma mark -
 #pragma mark NSObject
 
 - (id)initWithName:(NSString*)aName {
-	return [self initWithName:aName text:nil attributes:nil willBeStyled:NO];
+	return [self initWithName:aName text:nil attributes:nil];
 }
 
 - (id)initWithName:(NSString*)aName text:(NSString*)someText {
-	return [self initWithName:aName text:someText attributes:nil willBeStyled:NO];
+	return [self initWithName:aName text:someText attributes:nil];
 }
 
 - (id)initWithName:(NSString*)aName text:(NSString*)someText attributes:(NSMutableDictionary*)attributes {
-	return [self initWithName:aName text:someText attributes:nil willBeStyled:NO];
-}
-
-- (id)initWithName:(NSString*)aName text:(NSString*)someText attributes:(NSMutableDictionary*)attributes willBeStyled:(BOOL)isStyled {
 	if (self = [super init]) {
 		self.name = aName;
 		self.text = someText;
-		self.attributeDict = attributes;
-		self.willBeStyled = isStyled;
+		_attributeDict = [[NSMutableDictionary alloc] initWithDictionary:attributes];
 	}
 	return self;
 }
@@ -218,10 +218,53 @@
   return [self retrieveTextUpToDepth:-1 escapeHtmlEntities:YES addSpaceBetweenTags:YES];
 }
 
+#pragma mark Conversion (To XML/HTML)
+
+//Private
++ (NSString*)printTags:(NSArray*)tags removeTextAndComments:(BOOL)cullText {
+	NSMutableString *sb = [[[NSMutableString alloc] init] autorelease];
+	for (Tag *tag in tags) {
+		if(!tag.text && (tag.children == nil || tag.children.count ==0)) {
+			//Tag is independent, no children and should self-terminate			    
+			[sb appendFormat:@" <%@",tag.name];
+			for (NSString *key in [tag.attributeDict allKeys]) {
+				[sb appendFormat:@" %@=\"%@\"",key,[tag valueForAttribute:key]];
+			}
+			[sb appendString:@" /> "];			
+		} else {
+			//Write the tag and terminate it separately.
+			if(cullText && ![tag.name isEqualToString:@"comment"] && ![tag.name isEqualToString:@"text"]) {
+        
+				[sb appendFormat:@" <%@",tag.name];
+				for (NSString *key in [tag.attributeDict allKeys]) {
+					[sb appendFormat:@" %@=\"%@\"",key,[tag valueForAttribute:key]];
+				}
+				[sb appendString:@">"];			
+			}
+      
+			//Append the text of the tag
+			if(tag.text) {
+				//Ugly, but ran into issues with not escaping < and > in posts
+				[sb appendString:[tag.text stringByReplacingXMLElementEntities]];
+			}			      
+			
+			//Draw children
+			if(tag.children != nil && tag.children.count > 0) {
+				[sb appendString:[Tag printTags:tag.children removeTextAndComments:cullText]];
+			}
+			
+      if(cullText && ![tag.name isEqualToString:@"comment"] && ![tag.name isEqualToString:@"text"]) {
+        //Close tag if it's to be styled
+        [sb appendFormat:@"</%@> ",tag.name];								
+      }
+		}		
+	}
+	return sb;
+}
+
+//Public
+- (NSString*)toHTML {
+  return [Tag printTags:[NSArray arrayWithObject:self] removeTextAndComments:YES];
+}
+
 @end
-
-
-
-
-
-
