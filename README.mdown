@@ -47,6 +47,7 @@ What TagScraper Does
 * Performs XPath queries on NSData objects representing XML/HTML text
 * Returns XPath results as a custom Tag object or as NSDictionary objects
 * Is well suited to messily scrape data from web sites, typically for the purpose of redisplaying that data in a native iPhone application.
+* Converts Tag object hierarchy back to HTML for debugging purposes (i.e. `NSLog([tag toHTML])`)
 
 What TagScraper Doesn't Do
 --------------------------
@@ -63,5 +64,4 @@ Limitations
 To-dos
 ------
 
-* I have already written some code that converts a Tag object hierarchy back into XML/HTML, but it's currently tightly coupled to Three20 (filters out un-stylable tags)
 * As stated before, any weird entities can totally make this thing explode. If you'd like to help, checkout NSStringAdditions and flesh out the entities that are replaced. One just needs to take the effort to look up what's necessary and in what cases.
