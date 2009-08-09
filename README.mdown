@@ -1,5 +1,38 @@
-Limitations and Annoyances:
+TagScraper
+==========
 
+TagScraper is a very lightweight means to facilitate [Screen Scraping](http://en.wikipedia.org/wiki/Screen_Scraping#Screen_scraping) for iPhone applications. At the most basic level, this means performing an [XPath](http://en.wikipedia.org/wiki/XPath) query against an [XML](http://en.wikipedia.org/wiki/XML) document, usually loaded from the [Internet](http://en.wikipedia.org/wiki/Internet).
+
+
+Adding TagScraper to your project
+---------------------------------
+*TODO*
+
+Usage
+-----
+*TODO*
+
+What TagScraper Does
+--------------------
+* Performs XPath queries on NSData objects representing XML/HTML text
+* Returns XPath results as a custom Tag object or as NSDictionary objects
+* Is well suited to messily scrape data from web sites, typically for the purpose of redisplaying that data in a native iPhone application.
+
+What TagScraper Doesn't Do
+--------------------------
+* Make any effort to understand the difference between XML, XHTML, HTML, or specific doctypes within. 
+* Handle HTML entities or XML special characters (yet)
+
+Limitations
+-----------
+* Currently, will load and then release an XML document between every XPath query, making it terribly inefficient to perform multiple queries against one document.
 * XPath queries are currently only case sensitive. Adding some flags to control this and other contextual items would be nice.
 * Very few HTML entities are properly escaped.
 * In general, the Tag object model will strip whitespace aggressively without being clear in the API. This is because it was written to scrape pages that used abhorrent amounts of unnecessary whitespace within HTML content tags.
+
+To-dos
+------
+
+* I have already written some code that converts a Tag object hierarchy back into XML/HTML, but it's currently tightly coupled to Three20 (filters out un-stylable tags)
+* As stated before, any weird entities can totally make this thing explode, if you'd like to help, checkout NSStringAdditions and flesh out the entities that are replaced. I just need to take the effort to look up what's necessary and in what cases.
+
