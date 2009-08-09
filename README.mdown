@@ -6,7 +6,7 @@ TagScraper is a very lightweight means to facilitate [Screen Scraping](http://en
 
 Adding TagScraper to your project
 ---------------------------------
-*TODO*
+
 # Clone the TagScraper repository:
 	$ git clone git://github.com/searls/TagScraper.git
 # Find `TagScraper.xcodeproj` in Finder, then drag-and-drop it into your project's "Groups & Files" pane in Xcode underneath your Project.
