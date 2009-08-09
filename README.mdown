@@ -63,5 +63,5 @@ Limitations
 
 To-dos
 ------
-
+* Come up with a beginQueries/endQueries API in order to allow multiple queries to be performed on the same XML Document to save cycles.
 * As stated before, any weird entities can totally make this thing explode. If you'd like to help, checkout NSStringAdditions and flesh out the entities that are replaced. One just needs to take the effort to look up what's necessary and in what cases.
