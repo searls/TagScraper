@@ -7,10 +7,10 @@ TagScraper is a very lightweight means to facilitate [Screen Scraping](http://en
 Adding TagScraper to your project
 ---------------------------------
 
-1. Clone the TagScraper repository:
-
+1. Clone the TagScraper repository to a permanent location on your hard drive:
+<pre>
     $ git clone git://github.com/searls/TagScraper.git
-
+</pre>
 2. Find `TagScraper.xcodeproj` in Finder, then drag-and-drop it into your project's "Groups & Files" pane in Xcode underneath your Project.
 	* Uncheck "Copy items"
 	* Set "Reference Type" to "Relative to Project"
@@ -18,27 +18,27 @@ Adding TagScraper to your project
 3. Click "TagScraper.xcodeproj" in your "Groups & Files" pane, and in the upper right, you should see a file named "libTagScraper.a". Check the checkbox to the far right with a bullseye above it.
 4. Set up the project's dependencies.
 	1. From the menu bar, select `Project -> Edit Project Settings` and click the "General" tab.
-	2. Click the "+" icon under "Direct Dependencies" and add "TagScraper".
-	3. Click the "+" icon under "Linked Libraries" and add "libxml2.dylib".
+	2. Click the `+` icon under "Direct Dependencies" and add `TagScraper`.
+	3. Click the `+` icon under "Linked Libraries" and add `libxml2.dylib`.
 5. Set up the project settings
 	1. From the menu bar, select `Project -> Edit Project Settings` and click the "Build" tab. 
 	2. Set Configuration to "All Configurations" 
-	3. Under "Other Linker Flags" add both: "-all_load" and "-ObjC"
+	3. Under "Other Linker Flags" add both: `-all_load` and `-ObjC`
 	4. Under "Header Search Paths", add the relative path from your XCode project to the TagScraper source files. If your project and TagScraper shared the same root folder, this would be "../TagScraper/src"
 
 Usage
 -----
 For now, you need to import each header by hand, so import these:
 <pre>
-    #import "Tag.h"
-    #import "XPathQuery.h"
+#import "Tag.h"
+#import "XPathQuery.h"
 </pre>
 Then to try it in your code, here's an example converting an NSString to an NSData, performing the XPath query "//p", and producing a Tag from it. It *should* log to console "Content".
 <pre>
-    NSString *html = @"`<html><p>Content</p></html>`";
-    NSData *data = [html dataUsingEncoding:NSUTF8StringEncoding];
-    Tag *tag = [XPathQuery firstResultForXPathQuery:@"//p" onDocument:data];
-    NSLog([tag retrieveText]);
+NSString *html = @"`<html><p>Content</p></html>`";
+NSData *data = [html dataUsingEncoding:NSUTF8StringEncoding];
+Tag *tag = [XPathQuery firstResultForXPathQuery:@"//p" onDocument:data];
+NSLog([tag retrieveText]);
 </pre>
 
 I encourage you to explore the (brief) source code of the static library to see what your options are. The best usage examples will be in the Tag Scraper's "Tests" group, which can be executed by opening the `TagScraper.xcodeproj` and switching the Active Target to `TagScraperTests`.
