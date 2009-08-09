@@ -24,10 +24,9 @@
   //Test 2
   NSString *filePath = [[NSBundle mainBundle] pathForResource:@"sample-1" ofType:@"html"];
   NSData *sample1data = [NSData dataWithContentsOfFile:filePath];
-  NSArray *results = [XPathQuery performQueryWithXPath:@"//p" onDocument:sample1data shouldTreatAsHTML:YES returningAsTags:YES];
+  NSArray *results = [XPathQuery performXPathQuery:@"//p" onDocument:sample1data isHTML:YES returnTags:YES];
   Tag *tag = [results objectAtIndex:0];
   NSLog([tag retrieveTextUpToDepth:1]);
-  
   
   // Override point for customization after app launch    
   [window addSubview:viewController.view];
