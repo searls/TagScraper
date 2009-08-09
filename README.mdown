@@ -8,11 +8,15 @@ Adding TagScraper to your project
 ---------------------------------
 
 1. Clone the TagScraper repository:
+
 	$ git clone git://github.com/searls/TagScraper.git
+
 2. Find `TagScraper.xcodeproj` in Finder, then drag-and-drop it into your project's "Groups & Files" pane in Xcode underneath your Project.
+
 * Uncheck "Copy items"
 * Set "Reference Type" to "Relative to Project"
 * Check "Recursively create groups for any added folders"
+
 3. Click "TagScraper.xcodeproj" in your "Groups & Files" pane, and in the upper right, you should see a file named "libTagScraper.a". Check the checkbox to the far right with a bullseye above it.
 4. Expand The "Targets" expando in the "Groups & Files" pane and double-click the application target named the same as your project. Click the "+" icon under "Direct Dependencies" and add "TagScraper".
 5. From the menu bar, select `Project -> Edit Project Settings`, click the "Build" tab.
