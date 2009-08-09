@@ -9,19 +9,17 @@ Adding TagScraper to your project
 
 1. Clone the TagScraper repository:
 
-	$ git clone git://github.com/searls/TagScraper.git
+    $ git clone git://github.com/searls/TagScraper.git
 
 2. Find `TagScraper.xcodeproj` in Finder, then drag-and-drop it into your project's "Groups & Files" pane in Xcode underneath your Project.
-
- * Uncheck "Copy items"
- * Set "Reference Type" to "Relative to Project"
- * Check "Recursively create groups for any added folders"
-
+	* Uncheck "Copy items"
+	* Set "Reference Type" to "Relative to Project"
+	* Check "Recursively create groups for any added folders"
 3. Click "TagScraper.xcodeproj" in your "Groups & Files" pane, and in the upper right, you should see a file named "libTagScraper.a". Check the checkbox to the far right with a bullseye above it.
 4. Set up the project's dependencies.
- 1. From the menu bar, select `Project -> Edit Project Settings` and click the "General" tab.
- 2. Click the "+" icon under "Direct Dependencies" and add "TagScraper".
- 3. Click the "+" icon under "Linked Libraries" and add "libxml2.dylib".
+	1. From the menu bar, select `Project -> Edit Project Settings` and click the "General" tab.
+	2. Click the "+" icon under "Direct Dependencies" and add "TagScraper".
+	3. Click the "+" icon under "Linked Libraries" and add "libxml2.dylib".
 5. Set up the project settings
 	1. From the menu bar, select `Project -> Edit Project Settings` and click the "Build" tab. 
 	2. Set Configuration to "All Configurations" 
@@ -34,7 +32,7 @@ Adding TagScraper to your project
 </pre>
 Then to practice it in code, here's an example converting an NSString to an NSData and producing a Tag with it, and will log to console "Content", if all is well.
 <pre>
-    NSString *html = @"<html><p>Content</p></html>";
+    NSString *html = @"`<html><p>Content</p></html>`";
     NSData *data = [html dataUsingEncoding:NSUTF8StringEncoding];
     Tag *tag = [XPathQuery firstResultForXPathQuery:@"//p" onDocument:data];
     NSLog([tag retrieveText]);
