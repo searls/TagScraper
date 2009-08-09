@@ -13,14 +13,32 @@ Adding TagScraper to your project
 
 2. Find `TagScraper.xcodeproj` in Finder, then drag-and-drop it into your project's "Groups & Files" pane in Xcode underneath your Project.
 
-* Uncheck "Copy items"
-* Set "Reference Type" to "Relative to Project"
-* Check "Recursively create groups for any added folders"
+ * Uncheck "Copy items"
+ * Set "Reference Type" to "Relative to Project"
+ * Check "Recursively create groups for any added folders"
 
 3. Click "TagScraper.xcodeproj" in your "Groups & Files" pane, and in the upper right, you should see a file named "libTagScraper.a". Check the checkbox to the far right with a bullseye above it.
-4. Expand The "Targets" expando in the "Groups & Files" pane and double-click the application target named the same as your project. Click the "+" icon under "Direct Dependencies" and add "TagScraper".
-5. From the menu bar, select `Project -> Edit Project Settings`, click the "Build" tab.
-
+4. Set up the project's dependencies.
+ 1. From the menu bar, select `Project -> Edit Project Settings` and click the "General" tab.
+ 2. Click the "+" icon under "Direct Dependencies" and add "TagScraper".
+ 3. Click the "+" icon under "Linked Libraries" and add "libxml2.dylib".
+5. Set up the project settings
+ 1. From the menu bar, select `Project -> Edit Project Settings` and click the "Build" tab. 
+ 2. Set Configuration to "All Configurations" 
+ 3. Under "Other Linker Flags" add both: "-all_load" and "-ObjC"
+ 4. Under "Header Search Paths", add the relative path from your XCode project to the TagScraper source files. If your project and TagScraper shared the same root folder, this would be "../TagScraper/src"
+6. Use it in your code. For now, that means importing each file by hand (haven't merged these yet), so import these:
+`
+    #import "Tag.h"
+    #import "XPathQuery.h"
+`
+Then to practice it in code, here's an example converting an NSString to an NSData and producing a Tag with it, and will log to console "Content", if all is well.
+`
+    NSString *html = @"<html><p>Content</p></html>";
+    NSData *data = [html dataUsingEncoding:NSUTF8StringEncoding];
+    Tag *tag = [XPathQuery firstResultForXPathQuery:@"//p" onDocument:data];
+    NSLog([tag retrieveText]);
+`
 
 
 
@@ -51,4 +69,3 @@ To-dos
 
 * I have already written some code that converts a Tag object hierarchy back into XML/HTML, but it's currently tightly coupled to Three20 (filters out un-stylable tags)
 * As stated before, any weird entities can totally make this thing explode, if you'd like to help, checkout NSStringAdditions and flesh out the entities that are replaced. I just need to take the effort to look up what's necessary and in what cases.
-
